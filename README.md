@@ -1,3 +1,9 @@
+# Перевод Ruby on Rails Tutorial: пример приложения
+
+Это пример приложения для
+[*Перевод Ruby on Rails Tutorial: Изучение Rails на Примерах*](http://railstutorial.org/)
+by [Майкл Хартл](http://michaelhartl.com/).
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
