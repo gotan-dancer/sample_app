@@ -9,8 +9,8 @@ SampleApp::Application.routes.draw do
   get 'users/new'
   get 'signup' => 'users#new'
 
-#  resource :static_pages do
-#    get 'home'
+#  resource :users do
+#    get 'new'
 #    get 'help'
 #    get 'about'
 #    get 'contact'
