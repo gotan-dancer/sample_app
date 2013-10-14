@@ -9,12 +9,10 @@ SampleApp::Application.routes.draw do
   resources :users 
   get 'signup' => 'users#new'
 
-#do
-#    get 'new'
-#    get 'help'
-#    get 'about'
-#    get 'contact'
-#  end
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'signin' => 'sessions#new'
+  get 'signout' => 'sessions#destroy', via: :delete
+  get '/sessions' => 'sessions#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

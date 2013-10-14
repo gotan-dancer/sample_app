@@ -43,7 +43,11 @@ describe "User pages" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
     end
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> sign-in-out
     describe "after submission" do
       before { click_button submit }
 
@@ -57,6 +61,10 @@ describe "User pages" do
 
       it { should have_selector('title', text: user.name) }
       it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+<<<<<<< HEAD
+=======
+      it { should have_link('Sign out') }
+>>>>>>> sign-in-out
     end    
   end  
 end
