@@ -6,10 +6,10 @@ SampleApp::Application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
 
-  get 'users/new'
+  resources :users 
   get 'signup' => 'users#new'
 
-#  resource :users do
+#do
 #    get 'new'
 #    get 'help'
 #    get 'about'
