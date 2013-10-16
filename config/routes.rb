@@ -14,6 +14,8 @@ SampleApp::Application.routes.draw do
   get 'signout' => 'sessions#destroy', via: :delete
   get '/sessions' => 'sessions#create'
 
+  resources :microposts, only: [:create, :destroy]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
