@@ -6,7 +6,11 @@ SampleApp::Application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
 
-  resources :users 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   get 'signup' => 'users#new'
 
   resources :sessions, only: [:new, :create, :destroy]
@@ -15,6 +19,7 @@ SampleApp::Application.routes.draw do
   get '/sessions' => 'sessions#create'
 
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
